@@ -7,3 +7,15 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+images_data = [ { name: "beach", waldo: [ 503, 205 ], wenda: [ 629, 218 ], wizard: [ 221, 191 ], odlaw: [ 86, 193 ] } ]
+
+images_data.each do | data |
+  ImageCoordinate.find_or_create_by!(name: data[:name]) do | image_coordinate |
+    image_coordinate.waldo = data[:waldo]
+    image_coordinate.wenda = data[:wenda]
+    image_coordinate.wizard = data[:wizard]
+    image_coordinate.odlaw = data[:odlaw]
+    puts "Created image coordinate #{image_coordinate.name}"
+  end
+end

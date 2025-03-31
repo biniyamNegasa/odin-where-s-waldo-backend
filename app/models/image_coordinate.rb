@@ -1,0 +1,2 @@
+class ImageCoordinate < ApplicationRecord
+end
