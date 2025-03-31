@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2025_03_31_071014) do
+ActiveRecord::Schema[7.2].define(version: 2025_03_31_121309) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -22,5 +22,15 @@ ActiveRecord::Schema[7.2].define(version: 2025_03_31_071014) do
     t.integer "odlaw", default: [], array: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "timers", force: :cascade do |t|
+    t.string "name"
+    t.datetime "start_time"
+    t.datetime "finish_time"
+    t.string "image_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["image_name"], name: "index_timers_on_image_name"
   end
 end
