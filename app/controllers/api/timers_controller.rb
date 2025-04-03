@@ -1,4 +1,6 @@
 class Api::TimersController < ApplicationController
+  skip_before_action :verify_authenticity_token
+
   def create
     timer = Timer.new(timer_params.merge(start_time: Time.current))
 
