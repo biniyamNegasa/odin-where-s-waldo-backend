@@ -6,6 +6,7 @@ Rails.application.configure do
     allow do
       # Specify the origins that are allowed to access the API
       origins "http://localhost:5173"
+      origins "http://localhost:4173"
 
       # Specify the HTTP methods and headers that are allowed
       resource "*",
