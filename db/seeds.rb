@@ -8,11 +8,11 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-images_data = [ { name: "beach", waldo: [ 503, 205 ], wenda: [ 629, 218 ], wizard: [ 221, 191 ], odlaw: [ 86, 193 ] },
-                { name: "ice",   waldo: [ 696, 386 ], wenda: [ 398, 223 ], wizard: [ 59, 399 ],  odlaw: [ 257, 334 ] },
-                { name: "olympic", waldo: [ 229, 181 ], wenda: [ 204, 380 ], wizard: [ 499, 456 ], odlaw: [ 487, 341 ] },
-                { name: "carpet", waldo: [ 701, 781 ], wenda: [ 393, 1199 ], wizard: [ 665, 1213 ], odlaw: [ 295, 1422 ] },
-                { name: "space", waldo: [ 329, 340 ], wenda: [ 239, 284 ], wizard: [ 635, 315 ], odlaw: [ 58, 374 ] }
+images_data = [ { name: "beach", waldo: [ 61, 38 ], wenda: [ 77, 41 ], wizard: [ 27, 36 ], odlaw: [ 10, 36 ] },
+                { name: "ice",   waldo: [ 85, 74 ], wenda: [ 49, 42 ], wizard: [ 7, 77 ],  odlaw: [ 31, 64 ] },
+                { name: "olympic", waldo: [ 28, 34 ], wenda: [ 25, 74 ], wizard: [ 61, 87 ], odlaw: [ 59, 65 ] },
+                { name: "carpet", waldo: [ 85, 43 ], wenda: [ 48, 67 ], wizard: [ 81, 68 ], odlaw: [ 36, 80 ] },
+                { name: "space", waldo: [ 40, 63 ], wenda: [ 29, 52 ], wizard: [ 78, 58 ], odlaw: [ 7, 69 ] }
               ]
 
 images_data.each do | data |

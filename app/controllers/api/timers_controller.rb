@@ -20,7 +20,7 @@ class Api::TimersController < ApplicationController
     end
 
     if timer.update(finish_time: Time.current)
-      render json: timer, status: :ok
+      render json: { time_taken: timer.duration }, status: :ok
     else
       render json: timer.errors.full_messages, status: :unprocessable_entity
     end

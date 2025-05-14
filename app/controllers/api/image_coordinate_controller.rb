@@ -58,7 +58,7 @@ class Api::ImageCoordinateController < ApplicationController
       return false
     end
 
-    tolerance = 20
+    tolerance = 3
     (x - main_coord[0]).abs <= tolerance &&
       (y - main_coord[1]).abs <= tolerance
   end

@@ -4,7 +4,7 @@ class Api::LeaderboardsController < ApplicationController
 
     timers = Timer.completed.where(image_name: image_name).order(Arel.sql("finish_time - start_time ASC")).limit(50)
     leaderboard_data = timers.map do | timer |
-      { name: timer.name, time: timer.duration }
+      { name: timer.name, time_taken: timer.duration }
     end
 
     render json: leaderboard_data
