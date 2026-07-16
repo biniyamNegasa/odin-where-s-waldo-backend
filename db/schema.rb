@@ -10,18 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2025_03_31_121309) do
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
+ActiveRecord::Schema[7.2].define(version: 2026_07_16_090001) do
   create_table "image_coordinates", force: :cascade do |t|
     t.string "name"
-    t.integer "waldo", default: [], array: true
-    t.integer "wenda", default: [], array: true
-    t.integer "wizard", default: [], array: true
-    t.integer "odlaw", default: [], array: true
+    t.json "waldo", default: []
+    t.json "wenda", default: []
+    t.json "wizard", default: []
+    t.json "odlaw", default: []
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_image_coordinates_on_name", unique: true
   end
 
   create_table "timers", force: :cascade do |t|
@@ -31,6 +29,7 @@ ActiveRecord::Schema[7.2].define(version: 2025_03_31_121309) do
     t.string "image_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.json "found_characters", default: [], null: false
     t.index ["image_name"], name: "index_timers_on_image_name"
   end
 end

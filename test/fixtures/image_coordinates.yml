@@ -1,15 +1,15 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  waldo: 1
-  wenda: 1
-  wizard: 1
-  odlaw: 1
+  name: beach
+  waldo: [ 61, 38 ]
+  wenda: [ 77, 41 ]
+  wizard: [ 27, 36 ]
+  odlaw: [ 10, 36 ]
 
 two:
-  name: MyString
-  waldo: 1
-  wenda: 1
-  wizard: 1
-  odlaw: 1
+  name: ice
+  waldo: [ 85, 74 ]
+  wenda: [ 49, 42 ]
+  wizard: [ 7, 77 ]
+  odlaw: [ 31, 64 ]
